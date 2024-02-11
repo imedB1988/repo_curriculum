@@ -17,7 +17,9 @@ pipeline {
 
         stage('Front-End Unit tests / Shell Script') {
           steps {
-            sh 'apt install nodejs'
+            sh '''cd 
+curriculum-front && npm i
+ && npm run test:unit'''
           }
         }
 
