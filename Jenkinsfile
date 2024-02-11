@@ -17,7 +17,7 @@ pipeline {
 
         stage('Front-End Unit tests / Shell Script') {
           steps {
-            sh 'install nodejs'
+            sh 'apt install nodejs'
           }
         }
 
