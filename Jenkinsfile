@@ -9,11 +9,7 @@ pipeline {
 
     stage('Log') {
       steps {
-        sh ''' echo "Branch"
-
-        withNPM(npmrcConfig:\'my-custom-npmrc\') {
-            echo "Performing npm build..."
-            sh \'npm install\'}'''
+        sh 'ls -al'
       }
     }
 
