@@ -7,20 +7,9 @@ pipeline {
       }
     }
 
-    stage('installl dependencies') {
-      parallel {
-        stage('installl dependencies') {
-          steps {
-            sh 'npm install'
-          }
-        }
-
-        stage('NPM Test') {
-          steps {
-            sh 'npm test'
-          }
-        }
-
+    stage('tools') {
+      steps {
+        tool(name: 'nodejs', type: 'nodejs')
       }
     }
 
