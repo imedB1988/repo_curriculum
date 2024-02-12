@@ -15,9 +15,9 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('npm install') {
           steps {
-            nodejs 'NodeJS'
+            sh 'apt install nodejs'
           }
         }
 
