@@ -11,7 +11,7 @@ pipeline {
       parallel {
         stage('tools') {
           steps {
-            tool(name: 'nodejs', type: 'nodejs')
+            sh 'nodejs "nodejs"'
           }
         }
 
