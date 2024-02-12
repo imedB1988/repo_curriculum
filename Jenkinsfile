@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('Log') {
-      steps {
-        sh 'ls -al'
+      parallel {
+        stage('Log') {
+          steps {
+            sh 'ls -al'
+          }
+        }
+
+        stage('') {
+          steps {
+            nodejs 'NodeJS'
+          }
+        }
+
       }
     }
 
