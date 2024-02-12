@@ -8,19 +8,8 @@ pipeline {
     }
 
     stage('Log') {
-      parallel {
-        stage('Log') {
-          steps {
-            sh 'ls -al'
-          }
-        }
-
-        stage('npm install') {
-          steps {
-            sh 'apt install nodejs'
-          }
-        }
-
+      steps {
+        sh 'ls -al'
       }
     }
 
