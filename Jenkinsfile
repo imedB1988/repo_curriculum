@@ -9,7 +9,7 @@ pipeline {
 
     stage('Log') {
       steps {
-        sh 'npm i'
+        sh 'install nodejs'
       }
     }
 
