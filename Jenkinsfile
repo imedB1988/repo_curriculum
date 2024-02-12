@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('tools') {
-      steps {
-        tool(name: 'nodejs', type: 'nodejs')
+      parallel {
+        stage('tools') {
+          steps {
+            tool(name: 'nodejs', type: 'nodejs')
+          }
+        }
+
+        stage('example') {
+          steps {
+            sh 'npm config ls'
+          }
+        }
+
       }
     }
 
