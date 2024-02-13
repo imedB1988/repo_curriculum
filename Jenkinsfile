@@ -7,20 +7,9 @@ pipeline {
       }
     }
 
-    stage('tools') {
-      parallel {
-        stage('tools') {
-          steps {
-            sh 'nodejs "nodejs"'
-          }
-        }
-
-        stage('example') {
-          steps {
-            sh 'npm config ls'
-          }
-        }
-
+    stage('Log') {
+      steps {
+        sh 'ls -al'
       }
     }
 
